@@ -1,4 +1,4 @@
 {
   "dev": false,
-  "weather_key": ""
+  "weather_key": API_KEY
 }
