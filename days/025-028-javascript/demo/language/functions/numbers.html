@@ -9,8 +9,28 @@
     default summing a range of 1..100 - write a second function
     called range to return that range of integers */
 
+  function range100() {
+    var res = [];
+
+    for (let i=1; i<=100; i++) {
+      res.push(i);
+    }
+
+    return res;
+  }
+
   function sum(numbers){
-    // you code
+  
+    if (numbers === undefined)
+      numbers = range100();
+
+    let buf = 0;
+
+    for (let i in numbers)
+      buf += numbers[i];
+
+    return buf;
+
   }
 
 

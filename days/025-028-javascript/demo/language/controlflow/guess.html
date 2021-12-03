@@ -22,7 +22,32 @@
 
   const secretNumber = getRandomInt(1, 15);
 
-  // you code
+  let attempts = 0
+
+  while (true) {
+
+    attempts += 1;
+
+    if (attempts == 5) {
+      console.log("Too many attempts");
+      break;
+    }
+
+    let input = prompt("Enter a number between 1 and 15: ");
+    let guess = parseInt(input);
+
+    if (guess === secretNumber) {
+      console.log("You guessed it!");
+      break;
+    } else if (isNaN(guess)) {
+      continue;
+    } else if (guess < secretNumber) {
+      console.log("Too low");
+    } else {
+      console.log("Too high");
+    }
+
+  }
 
   </script>
 </body>

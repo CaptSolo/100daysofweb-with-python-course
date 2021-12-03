@@ -23,6 +23,20 @@
   const names = ['tim', 'sara', 'mike', 'julian', 'eva', 'amy'];
   const ages = [14, 33, 17, 18, 25, 7];
 
+  for (let i in names) {
+
+    // let buf = names[i] + " (" + ages[i] + ") ";
+    let buf = `${names[i]} (${ages[i]}) `;
+
+    if (ages[i] >= minAge) {
+      buf += "is allowed to drive";
+    } else {
+      buf += "is not allowed to drive";
+    }
+
+    console.log(buf); 
+
+  }
   // you code
 
   </script>
