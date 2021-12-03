@@ -38,7 +38,39 @@
 
   <script type="text/javascript">
   function doCalculation(){
-    // you code
+
+    let num1 = parseInt(document.getElementById("num1").value);
+    let num2 = parseInt(document.getElementById("num2").value);
+
+    let op = document.getElementById("operator").value;
+    
+    let res = 0;
+
+    switch (op) {
+      case "+":
+        res = num1 + num2
+        break;
+      case "-":
+        res = num1 - num2
+        break;
+      case "*":
+        res = num1 * num2
+        break;
+      case "/":
+        res = num1 / num2
+        break;
+    }
+
+    let out = document.getElementById("result");
+
+    if (isNaN(res) || !isFinite(res)) {
+      out.style.color = "red";
+    } else {
+      out.style.color = "green";
+    }
+
+    out.innerHTML = res;
+
   }
   </script>
 
