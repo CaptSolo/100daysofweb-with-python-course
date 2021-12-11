@@ -25,6 +25,17 @@ def get_default_user():
     return user
 
 
+def get_category(name: str) -> Category:
+
+    session = session_factory.create_session()
+
+    cat = session.query(Category).filter(Category.name == name).first()
+
+    session.commit()
+
+    return cat
+
+
 def create_post(user: User, title:str, text:str, date: datetime.datetime, category: Category = None) -> Post:
 
     session = session_factory.create_session()
