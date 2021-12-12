@@ -1,0 +1,13 @@
+<div metal:use-macro="load: layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="content">
+            <h1><span class="font-semi-bold">Book information</span></h1>
+
+            <div>
+                <p>${book.id}. ${book.title} by ${book.author}.</p>
+            </div> 
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div metal:use-macro="load: layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="content">
+            <h1><span class="font-semi-bold">Books</span> <span class="smaller">list</span></h1>
+
+            <div tal:repeat="b books">
+                <p>${b.id}. <a href="/book/${b.id}">${b.title}</a></p>
+            </div> 
+        </div>
+
+    </div>
+</div>
